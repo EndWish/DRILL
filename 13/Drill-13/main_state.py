@@ -81,8 +81,8 @@ def update():
     for ball in balls.copy():
         if collide(ball, grass):
             ball.stop()
-        if collide(ball, boy):
-            balls.remove(ball)
+        if collide(ball, boy):  # 1차 적으로 볼과 소년의 충돌
+            balls.remove(ball)  # 일단 충돌이 없어지면, 충돌체크가 더 이상 필요하지 않기 때문에
             game_world.remove_object(ball)
             
         # 벽돌이랑 부딫힐경우
